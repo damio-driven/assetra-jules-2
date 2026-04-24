@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASSETRA | Arredo Contract e Interior Design di Eccellenza — Retail, Hospitality, Uffici</title>
+  <meta name="description" content="ASSETRA: Rappresentanza di eccellenza per soluzioni di interior design e arredo contract nel settore retail, hospitality e uffici. Qualità e design italiano.">
+  <meta name="keywords" content="arredo contract, interior design, rappresentanza mobili, retail, hospitality, uffici, spazi professionali, arredo su misura">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ASSETRA | Arredo Contract e Interior Design di Eccellenza">
+  <meta property="og:description" content="Rappresentanza di eccellenza per soluzioni di interior design e arredo contract.">
+  <meta property="og:image" content="https://www.assetra.it/assets/images/hero-main.jpg">
+  <meta property="og:url" content="https://www.assetra.it/">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/cookie-banner.css">
+
+  <style>
+    /* Section specific styles for early layout */
+    section {
+      overflow: hidden;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: var(--header-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4rem;
+      z-index: 100;
+      transition: background 0.4s ease, border 0.4s ease;
+      background: transparent;
+    }
+
+    header.scrolled {
+      background: var(--color-surface);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--color-accent);
+    }
+
+    #lang-toggle {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.8rem;
+      border: 1px solid var(--color-border);
+      padding: 0.2rem 0.5rem;
+    }
+
+    #hero {
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('assets/images/hero-main.jpg');
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(247,245,242,0.15);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 800px;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(3rem, 8vw, 5rem);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: var(--color-text-muted);
+      margin-bottom: 2.5rem;
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 60px;
+      background: var(--color-border);
+      overflow: hidden;
+    }
+
+    .scroll-indicator::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--color-accent);
+      animation: scrollLine 2s infinite;
+    }
+
+    @keyframes scrollLine {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(100%); }
+    }
+
+    #about {
+      background: var(--color-surface);
+      display: flex;
+      align-items: center;
+      min-height: 80vh;
+    }
+
+    .about-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    .about-image {
+      position: relative;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    }
+
+    .about-stats {
+      display: flex;
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .stat-item h3 {
+      font-size: 2.5rem;
+      color: var(--color-accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-item p {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-text-muted);
+    }
+
+    #services {
+      background: var(--color-bg);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+
+    .service-card {
+      background: var(--color-surface);
+      padding: 3rem;
+      border: 1px solid var(--color-border);
+      transition: all 0.4s ease;
+    }
+
+    .service-card:hover {
+      border-color: var(--color-accent);
+      transform: translateY(-10px);
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin: 1.5rem 0 1rem;
+    }
+
+    .service-card p {
+      color: var(--color-text-muted);
+      font-size: 0.95rem;
+    }
+
+    .service-icon {
+      width: 40px;
+      height: 40px;
+      stroke: var(--color-accent);
+      stroke-width: 1.5;
+      fill: none;
+    }
+
+    #portfolio {
+      background: var(--color-surface);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .portfolio-info {
+      padding: 1.5rem 0;
+    }
+
+    .portfolio-info span {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--color-accent);
+    }
+
+    .portfolio-info h3 {
+      font-size: 1.8rem;
+      margin-top: 0.5rem;
+    }
+
+    #social-feed {
+      background: var(--color-bg);
+    }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 3rem;
+    }
+
+    .social-embed-placeholder {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    #contact {
+      background: var(--color-surface);
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .form-group label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-text-muted);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 1rem;
+      border: 1px solid var(--color-border);
+      background: transparent;
+      font-family: var(--font-body);
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--color-accent);
+    }
+
+    .privacy-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+    }
+
+    .privacy-check input {
+      margin-top: 0.25rem;
+    }
+
+    footer {
+      background: var(--color-text);
+      color: white;
+      padding: 5rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links h4 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.5rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .footer-links ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .footer-links a {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    @media (max-width: 1024px) {
+      header { padding: 0 2rem; }
+      .nav-links { display: none; } /* Mobile menu simplified for now */
+
+      .about-container, .contact-container, .social-grid, .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .services-grid, .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="#"><img src="assets/svg/logo.svg" alt="ASSETRA Logo"></a>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#about" data-it="Chi siamo" data-en="About Us">Chi siamo</a>
+      <a href="#services" data-it="Servizi" data-en="Services">Servizi</a>
+      <a href="#portfolio" data-it="Portfolio" data-en="Portfolio">Portfolio</a>
+      <a href="#contact" data-it="Contatti" data-en="Contact">Contatti</a>
+    </nav>
+
+    <div class="header-actions">
+      <span id="lang-toggle">IT</span>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <h1 data-it="L'eccellenza prende forma." data-en="Excellence takes shape.">L'eccellenza prende forma.</h1>
+        <p data-it="Soluzioni di interior design e arredo contract per spazi professionali d'élite." data-en="Interior design and contract furnishing solutions for elite professional spaces.">Soluzioni di interior design e arredo contract per spazi professionali d'élite.</p>
+        <a href="#services" class="btn btn-outline-accent" data-it="Scopri le soluzioni" data-en="Discover solutions">Scopri le soluzioni</a>
+      </div>
+      <div class="scroll-indicator"></div>
+    </section>
+
+    <section id="about" class="section-padding">
+      <div class="container about-container">
+        <div class="about-text reveal">
+          <span class="uppercase-xs text-accent" data-it="Chi Siamo" data-en="About Us">Chi Siamo</span>
+          <h2 style="font-size: 3rem; margin: 1.5rem 0;" data-it="Rappresentanza di eccellenza per spazi che ispirano" data-en="Excellence representation for inspiring spaces">Rappresentanza di eccellenza per spazi che ispirano</h2>
+          <p data-it="ASSETRA è il partner strategico per architetti e developer che ricercano il meglio dell'arredo contract. Con anni di esperienza nel settore, rappresentiamo brand che definiscono nuovi standard di qualità e design." data-en="ASSETRA is the strategic partner for architects and developers seeking the best in contract furnishing. With years of industry experience, we represent brands that define new standards of quality and design.">ASSETRA è il partner strategico per architetti e developer che ricercano il meglio dell'arredo contract. Con anni di esperienza nel settore, rappresentiamo brand che definiscono nuovi standard di qualità e design.</p>
+
+          <div class="about-stats">
+            <div class="stat-item">
+              <h3 class="stat-number" data-target="15">0</h3>
+              <p data-it="Anni di Esperienza" data-en="Years of Experience">Anni di Esperienza</p>
+            </div>
+            <div class="stat-item">
+              <h3 class="stat-number" data-target="250">0</h3>
+              <p data-it="Progetti Completati" data-en="Projects Completed">Progetti Completati</p>
+            </div>
+            <div class="stat-item">
+              <h3 class="stat-number" data-target="12">0</h3>
+              <p data-it="Brand Partner" data-en="Partner Brands">Brand Partner</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-image reveal" style="transition-delay: 0.2s;">
+          <img src="assets/images/about-main.jpg" alt="Interior Design Consultation" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section-padding">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="uppercase-xs text-accent" data-it="Servizi" data-en="Services">Servizi</span>
+          <h2 style="font-size: 3rem; margin-top: 1rem;" data-it="Soluzioni su Misura" data-en="Tailored Solutions">Soluzioni su Misura</h2>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <svg class="service-icon"><rect x="5" y="5" width="30" height="30" /></svg>
+            <h3 data-it="Retail" data-en="Retail">Retail</h3>
+            <p data-it="Arredi per flagship store e boutique che esaltano l'identità del brand." data-en="Furnishings for flagship stores and boutiques that enhance brand identity.">Arredi per flagship store e boutique che esaltano l'identità del brand.</p>
+          </div>
+          <div class="service-card reveal" style="transition-delay: 0.1s;">
+            <svg class="service-icon"><path d="M10 30 L20 10 L30 30 Z" /></svg>
+            <h3 data-it="Hospitality" data-en="Hospitality">Hospitality</h3>
+            <p data-it="Soluzioni per hotel e resort dove il comfort incontra il design di lusso." data-en="Solutions for hotels and resorts where comfort meets luxury design.">Soluzioni per hotel e resort dove il comfort incontra il design di lusso.</p>
+          </div>
+          <div class="service-card reveal" style="transition-delay: 0.2s;">
+            <svg class="service-icon"><circle cx="20" cy="20" r="15" /></svg>
+            <h3 data-it="Uffici & Contract" data-en="Offices & Contract">Uffici & Contract</h3>
+            <p data-it="Spazi professionali progettati per la produttività e il benessere." data-en="Professional spaces designed for productivity and well-being.">Spazi professionali progettati per la produttività e il benessere.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section-padding">
+      <div class="container">
+        <div class="reveal">
+          <span class="uppercase-xs text-accent" data-it="Portfolio" data-en="Portfolio">Portfolio</span>
+          <h2 style="font-size: 3rem; margin-top: 1rem;" data-it="Progetti in evidenza" data-en="Featured Projects">Progetti in evidenza</h2>
+        </div>
+
+        <div class="portfolio-grid">
+          <div class="portfolio-item reveal">
+            <img src="assets/images/portfolio-retail-01.jpg" alt="Retail Project" loading="lazy">
+            <div class="portfolio-info">
+              <span data-it="Retail" data-en="Retail">Retail</span>
+              <h3 data-it="Flagship Store Milano" data-en="Milan Flagship Store">Flagship Store Milano</h3>
+            </div>
+          </div>
+          <div class="portfolio-item reveal" style="transition-delay: 0.1s;">
+            <img src="assets/images/portfolio-hospitality-01.jpg" alt="Hospitality Project" loading="lazy">
+            <div class="portfolio-info">
+              <span data-it="Hospitality" data-en="Hospitality">Hospitality</span>
+              <h3 data-it="Luxury Hotel Rome" data-en="Luxury Hotel Rome">Luxury Hotel Rome</h3>
+            </div>
+          </div>
+          <div class="portfolio-item reveal">
+            <img src="assets/images/portfolio-office-01.jpg" alt="Office Project" loading="lazy">
+            <div class="portfolio-info">
+              <span data-it="Uffici" data-en="Offices">Uffici</span>
+              <h3 data-it="Corporate Hub" data-en="Corporate Hub">Corporate Hub</h3>
+            </div>
+          </div>
+          <div class="portfolio-item reveal" style="transition-delay: 0.1s;">
+            <img src="assets/images/portfolio-retail-02.jpg" alt="Retail Project" loading="lazy">
+            <div class="portfolio-info">
+              <span data-it="Retail" data-en="Retail">Retail</span>
+              <h3 data-it="Boutique Torino" data-en="Turin Boutique">Boutique Torino</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="social-feed" class="section-padding">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="uppercase-xs text-accent" data-it="Social" data-en="Social">Social</span>
+          <h2 style="font-size: 3rem; margin-top: 1rem;" data-it="Seguici su Instagram e LinkedIn" data-en="Follow us on Instagram & LinkedIn">Seguici su Instagram e LinkedIn</h2>
+        </div>
+
+        <div class="social-grid">
+          <div class="social-embed-placeholder reveal" data-type="LinkedIn">
+            <!-- TODO: sostituire con embed LinkedIn SDK -->
+          </div>
+          <div class="social-embed-placeholder reveal" data-type="Instagram" style="transition-delay: 0.1s;">
+            <!-- TODO: sostituire con embed Instagram SDK -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-padding">
+      <div class="container contact-container">
+        <div class="contact-info reveal">
+          <span class="uppercase-xs text-accent" data-it="Contatti" data-en="Contact">Contatti</span>
+          <h2 style="font-size: 3rem; margin: 1.5rem 0;" data-it="Iniziamo a parlare." data-en="Let's start talking.">Iniziamo a parlare.</h2>
+          <p style="margin-bottom: 3rem;" data-it="Siamo a tua disposizione per consulenze e progetti su misura." data-en="We are at your disposal for consultations and custom projects.">Siamo a tua disposizione per consulenze e progetti su misura.</p>
+
+          <div class="contact-details">
+            <p><strong>Email:</strong> info@assetra.it</p>
+            <p><strong>Tel:</strong> +39 02 1234567</p>
+            <p><strong>Indirizzo:</strong> Via Montenapoleone 1, Milano</p>
+          </div>
+        </div>
+
+        <div class="contact-form reveal" style="transition-delay: 0.2s;">
+          <div class="form-group">
+            <label data-it="Nome" data-en="First Name">Nome</label>
+            <input type="text" placeholder="Mario">
+          </div>
+          <div class="form-group">
+            <label data-it="Cognome" data-en="Last Name">Cognome</label>
+            <input type="text" placeholder="Rossi">
+          </div>
+          <div class="form-group">
+            <label data-it="Email" data-en="Email">Email</label>
+            <input type="email" placeholder="mario.rossi@email.it">
+          </div>
+          <div class="form-group">
+            <label data-it="Settore" data-en="Sector">Settore</label>
+            <select>
+              <option value="retail">Retail</option>
+              <option value="hospitality">Hospitality</option>
+              <option value="office">Uffici</option>
+              <option value="professional">Spazi Professionali</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label data-it="Messaggio" data-en="Message">Messaggio</label>
+            <textarea rows="5" placeholder="Come possiamo aiutarti?"></textarea>
+          </div>
+          <div class="privacy-check">
+            <input type="checkbox" id="privacy-policy">
+            <label for="privacy-policy" data-it="Ho letto e accetto la Privacy Policy" data-en="I have read and accept the Privacy Policy">Ho letto e accetto la Privacy Policy</label>
+          </div>
+          <button class="btn btn-outline-accent" data-it="Invia Messaggio" data-en="Send Message">Invia Messaggio</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">ASSETRA<span style="color: var(--color-accent)">.</span></div>
+          <p style="opacity: 0.6; font-size: 0.9rem;" data-it="Eccellenza italiana nell'arredo contract e interior design." data-en="Italian excellence in contract furnishing and interior design.">Eccellenza italiana nell'arredo contract e interior design.</p>
+        </div>
+        <div class="footer-links">
+          <h4 data-it="Esplora" data-en="Explore">Esplora</h4>
+          <ul>
+            <li><a href="#about" data-it="Chi siamo" data-en="About Us">Chi siamo</a></li>
+            <li><a href="#services" data-it="Servizi" data-en="Services">Servizi</a></li>
+            <li><a href="#portfolio" data-it="Portfolio" data-en="Portfolio">Portfolio</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4 data-it="Legale" data-en="Legal">Legale</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4 data-it="Social" data-en="Social">Social</h4>
+          <ul>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 ASSETRA. <span data-it="Tutti i diritti riservati." data-en="All rights reserved.">Tutti i diritti riservati.</span></p>
+        <p>P.IVA 01234567890</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookie-banner">
+    <div class="container">
+      <div class="cookie-content">
+        <h3 data-it="Privacy & Cookie" data-en="Privacy & Cookies">Privacy & Cookie</h3>
+        <p data-it="Utilizziamo i cookie per garantire la migliore esperienza sul nostro sito." data-en="We use cookies to ensure the best experience on our website.">Utilizziamo i cookie per garantire la migliore esperienza sul nostro sito.</p>
+      </div>
+      <div class="cookie-actions">
+        <button id="cookie-accept-all" class="btn btn-outline-accent" data-it="Accetta tutti" data-en="Accept all">Accetta tutti</button>
+        <button id="cookie-necessary" class="btn btn-outline-accent" data-it="Solo necessari" data-en="Necessary only">Solo necessari</button>
+        <button id="cookie-customize" class="btn" style="color: var(--color-text-muted)" data-it="Personalizza" data-en="Customize">Personalizza</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/cookie-consent.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/social-feed-placeholder.js"></script>
+</body>
+</html>
