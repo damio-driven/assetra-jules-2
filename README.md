@@ -1,5 +1,5 @@
 # ASSETRA — Project Brief for Claude Code
-## Variant: LIGHT (Soft Luxury / Contemporary Elegance)
+## Variant: DARK (Roman Imperial / Bold Luxury)
 
 ---
 
@@ -16,56 +16,63 @@
 
 ## Brand Identity
 
-**Logo:** Wordmark "ASSETRA." — lettering bianco/nero, punto finale rosso. Tratta il punto rosso come elemento grafico identitario: replicalo come accent in tutta l'interfaccia.
+**Logo:** Wordmark "ASSETRA." — lettering bianco su sfondo scuro, punto finale rosso. Il punto rosso è l'unico colore caldo in un mondo di pietra e inchiostro — trattalo come un sigillo imperiale.
 
 **Brand colors:**
 ```css
 :root {
-  --color-bg:         #F7F5F2;   /* off-white caldo, non bianco puro */
-  --color-surface:    #FFFFFF;
-  --color-text:       #1A1A18;   /* quasi-nero elegante */
-  --color-text-muted: #7A776F;
-  --color-accent:     #C8102E;   /* rosso ASSETRA — usarlo con parsimonia */
-  --color-accent-dim: #E8D5D8;   /* rosso desaturato per sfondi sottili */
-  --color-border:     #E2DED8;
-  --color-gold:       #C9A96E;   /* opzionale: accento lusso secondario */
+  --color-bg:          #0D0D0B;  /* nero quasi assoluto, leggermente caldo */
+  --color-surface:     #141412;  /* superficie card/sezioni */
+  --color-surface-alt: #1C1C19;  /* alternanza sezioni */
+  --color-text:        #F0EDE6;  /* bianco avorio — mai bianco puro */
+  --color-text-muted:  #8A8880;
+  --color-accent:      #C8102E;  /* rosso ASSETRA — il sigillo */
+  --color-accent-glow: rgba(200,16,46,0.15); /* alone rosso per effetti */
+  --color-gold:        #B8965A;  /* oro romano — per dettagli epigrafici */
+  --color-border:      #2A2A26;
+  --color-border-gold: rgba(184,150,90,0.3);
 }
 ```
 
-**Tone:** Raffinato, sobrio, autorevole. Mai gridato. Il rosso appare solo nei punti di massimo impatto — CTA, highlight, dettagli grafici. Il resto respira.
+**Tone:** Imperiale, monumentale, senza compromessi. Come un palazzo romano rivestito di marmo e metallo. La forza viene dalla geometria e dalla tipografia, non dagli effetti. Il rosso è potere.
 
 ---
 
-## Aesthetic Direction — LIGHT Variant
+## Aesthetic Direction — DARK Variant
 
-**Mood:** Luxury editorial. Come le pagine di un catalogo di arredo di alta gamma — bianco dominante, tipografia grande e ariosa, fotografie a tutto schermo.
+**Mood:** Roman Imperial meets contemporary luxury. Epigrafia, geometrie lapidee, contrasti estremi. Pensa a un museo di design a Roma: architettura antica, oggetti modernissimi.
 
 **Typography:**
-- Display / Headlines: `Cormorant Garamond` (Google Fonts) — serif classico con aste fini, trasmette eccellenza senza ostentazione
-- Body / UI: `DM Sans` — moderno, leggibile, neutro
-- Accent labels / eyebrows: `DM Sans` uppercase tracking-widest, size xs
+- Display / Headlines: `Trajan Pro` (se disponibile via @font-face) oppure `IM Fell English` o **`Cinzel`** (Google Fonts) — maiuscoletto romano con grazie lapidee, evoca iscrizioni su pietra
+- Secondary display: `Cormorant Garamond` in italic per citazioni e sottotitoli
+- Body / UI: `Raleway` weight 300/400 — moderno, geometrico, leggibile su scuro
+- Accent labels: `Cinzel` uppercase, tracking molto largo, dimensione xs — come un'epigrafe
 
 ```html
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Cormorant+Garamond:ital,wght@1,300;1,400&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
 ```
 
 **Layout principles:**
-- Ampi spazi negativi — il respiro è parte del design
-- Griglie asimmetriche: testo a sinistra, immagine che deborda a destra (o viceversa)
-- Bordi sottili `1px` come separatori, non box pesanti
-- Sezioni alternate: sfondo `--color-bg` / sfondo `--color-surface`
-- Nessun box-shadow aggressivo — usa `border` o `outline` sottile
+- Sfondo quasi-nero dominante con sezioni che emergono per variazione di tono, non di colore
+- Linee orizzontali in `--color-gold` (1px) come separatori epigrafici
+- Titoli in `Cinzel` tutto maiuscolo, spaziatura lettere `0.15em`
+- Elementi geometrici decorativi SVG: linee, rombi, croci lapidee — in oro, sottili
+- Asimmetria controllata: griglie che rompono l'allineamento ma mantengono ordine
+- Un singolo elemento per sezione può essere evidenziato con `--color-accent` (rosso)
 
 **Motion:**
-- Reveal on scroll: `opacity 0 → 1` + `translateY(30px) → 0`, `transition: 0.8s ease`
-- Stagger sugli elementi di lista/card: `animation-delay` incrementale (0.1s per elemento)
-- Hover sulle card: scala leggera `scale(1.02)` + bordo rosso sottile che appare
-- Nessuna animazione aggressiva — tutto fluido e rallentato
+- Reveal on scroll: `opacity 0 → 1` + `translateY(40px) → 0`, timing più lento `1s ease`
+- Headlines: effetto "incisione" — le lettere appaiono carattere per carattere con JS (typewriter lapideo)
+- Linee decorative: si "disegnano" all'entrata in viewport (CSS `stroke-dashoffset` animation)
+- Hover su card: bordo oro che appare + overlay scuro si solleva leggermente
+- Cursore custom opzionale: piccolo rombo/croce in CSS
 
 **Backgrounds & visual details:**
-- Hero: immagine full-screen con overlay sottile `rgba(247,245,242,0.15)`, nessun gradient pesante
-- Sezione "about": sfondo bianco con pattern geometrico SVG inline molto leggero (linee diagonali sottili in `--color-border`)
-- Texture grain opzionale sull'hero: `filter: url(#noise)` SVG o CSS grain @1% opacity
+- Hero: immagine full-screen con overlay scuro `rgba(13,13,11,0.65)` — spazio di lusso quasi irriconoscibile, evocativo
+- Texture: grain CSS (`background-image: url("data:image/svg+xml...")`) @2% opacity su tutti gli sfondi
+- Decorazioni SVG inline: motivi geometrici angolari ispirati a pavimenti romani, bordi a meandro
+- Sezione about: divisore SVG con motivo a onde romane o meandro greco-romano
+- Linee verticali sottili in `--color-gold` come colonne decorative laterali
 
 ---
 
@@ -73,55 +80,57 @@
 
 ### 1. `<header>` — Navbar
 - Logo ASSETRA. a sinistra (SVG inline, punto in `--color-accent`)
-- Nav links centrati o a destra: `Chi siamo · Servizi · Portfolio · Partner · Contatti`
-- Toggle lingua IT / EN top-right (semplice `data-lang` switch JS)
-- Sticky, background `transparent → white` on scroll con transizione
-- Mobile: hamburger menu, fullscreen overlay
+- Nav links in `Cinzel` uppercase tracking-wide: `CHI SIAMO · SERVIZI · PORTFOLIO · PARTNER · CONTATTI`
+- Toggle lingua IT / EN top-right
+- Sticky, background da `transparent` a `--color-bg` con blur backdrop
+- Mobile: hamburger → menu fullscreen overlay scuro con nav centrata e grande
 
 ### 2. `#hero` — Homepage Hero
-- Immagine stock full-viewport di uno spazio interior design di lusso (ufficio o hospitality premium)
-- Headline grande in `Cormorant Garamond`: *"L'eccellenza prende forma."*
-- Sottotitolo in `DM Sans` light: breve descrizione ASSETRA (1–2 righe)
-- CTA primario: pulsante outline rosso → `Scopri le soluzioni`
-- Scroll indicator animato (linea verticale che si allunga)
+- Immagine full-viewport di spazio premium in B&W o toni scuri (hotel di lusso, ufficio direzionale)
+- Overlay layering: base scura + grain + vignette ai bordi
+- Eyebrow label in `Cinzel` gold: `RAPPRESENTANZA DI ECCELLENZA`
+- Headline monumentale: *"L'ECCELLENZA PRENDE FORMA."* — `Cinzel` 900, molto grande, con punto finale in `--color-accent`
+- Sottotitolo in `Cormorant Garamond` italic: breve descrizione evocativa
+- CTA: pulsante outline `--color-accent` con hover fill; secondo link ghost in oro
+- Decorazione: linea verticale gold animata a sinistra dell'headline
 
 ### 3. `#about` — Chi Siamo
-- Layout 50/50: testo a sinistra, immagine ritagliata asimmetrica a destra
-- Titolo: *"Rappresentanza di eccellenza per spazi che ispirano"*
-- Copy: genera copy professionale su ASSETRA come agente di rappresentanza per arredo contract di alto livello (retail, hospitality, uffici, spazi professionali), con focus su qualità, relazioni, personalizzazione
-- Stat numbers animati (contatore JS): es. anni di esperienza, brand rappresentati, progetti completati
+- Layout: testo occupa 60% con un blocco di citazione in `Cormorant Garamond` italic grande a sinistra
+- Immagine: ritagliata con clip-path angolato (non rettangolo standard)
+- Titolo: `CHI SIAMO` in Cinzel gold sopra, headline grande sotto
+- Divisore superiore: SVG meandro romano in `--color-gold`
+- Stat numbers: contatore animato in Cinzel, unità in Raleway muted
 
 ### 4. `#services` — Servizi / Soluzioni
-- Grid 3 colonne (mobile: 1 colonna)
-- Card minimal: icona SVG lineare + titolo + descrizione breve
-- Settori: **Retail** · **Hospitality** · **Uffici e Contract** · **Spazi Professionali** · **Consulenza** · **Progettazione**
-- Hover: bordo `--color-accent` + leggero lift
+- Grid 3 colonne, card con bordo `--color-border-gold`
+- Card: numero romano (I, II, III...) in Cinzel gold grande + titolo + descrizione
+- Hover: bordo diventa `--color-gold` pieno + angolo in `--color-accent`
+- Settori: Retail · Hospitality · Uffici e Contract · Spazi Professionali · Consulenza · Progettazione
 
 ### 5. `#portfolio` — Portfolio / Progetti
-- Masonry grid o layout editoriale asimmetrico con immagini stock di alta qualità
-- Filter bar: `Tutti · Retail · Hospitality · Uffici`
-- Click → lightbox semplice (CSS/JS vanilla, no librerie pesanti)
-- Ogni card: immagine + categoria + titolo progetto
+- Layout a griglia con proporzioni variabili (alcune card 2x1, alcune 1x1)
+- Immagini in toni scuri/neutri — overlay gold al hover
+- Filter bar in Cinzel uppercase
+- Lightbox: overlay scuro totale, immagine centrata, navigazione con frecce stilizzate
 
 ### 6. `#social-feed` — Social Feed
-- Sezione placeholder elegante pronta per integrazione futura LinkedIn + Instagram
-- Layout: 2 colonne (LinkedIn | Instagram), 3 card preview ciascuna
-- Ogni card: wireframe stilizzato con icona social, data, testo placeholder
-- Commento HTML `<!-- TODO: sostituire con embed LinkedIn/Instagram SDK -->` 
-- Classe CSS `.social-embed-placeholder` per futura sostituzione
+- Placeholder card con bordo gold + icona social
+- Layout: 2 colonne (LinkedIn | Instagram), sfondo `--color-surface-alt`
+- Commento HTML `<!-- TODO: sostituire con embed LinkedIn/Instagram SDK -->`
 
 ### 7. `#contact` — Contatti + Form
-- Headline: *"Iniziamo a parlare."*
-- Form campi: Nome · Cognome · Email · Telefono · Settore (select) · Messaggio · Privacy checkbox
-- Validazione JS vanilla lato client (no librerie)
-- Submit: `fetch()` verso endpoint placeholder (es. Formspree o da configurare)
-- Info laterali: indirizzo, email, telefono, link social
+- Headline monumentale: *"INIZIAMO A PARLARE."*
+- Form su sfondo `--color-surface` con bordi gold su focus
+- Campi: Nome · Cognome · Email · Telefono · Settore (select) · Messaggio · Privacy
+- Input styling: bordo inferiore only (stile lapideo, no box), label flottante
+- CTA submit: button rosso pieno `--color-accent`
 
 ### 8. `<footer>`
-- Logo + tagline
-- Link pagine + link privacy policy + cookie policy
-- Copyright `© 2025 ASSETRA. Tutti i diritti riservati.`
-- Social icons (LinkedIn, Instagram)
+- Sfondo ancora più scuro `#080806`
+- Logo + tagline in Cinzel
+- Separatori gold
+- Link footer + privacy + cookie
+- Copyright con punto finale rosso: `© 2025 ASSETRA`
 
 ---
 
@@ -130,35 +139,33 @@
 Implementa obbligatoriamente:
 
 ### Cookie Banner
-- Banner in basso, design coerente con il sito
+- Banner in basso, design coerente con il tema dark: sfondo `--color-surface`, bordo gold superiore
 - Tre livelli: **Necessari** (sempre attivi) · **Analitici** · **Marketing/Social**
-- Pulsanti: `Accetta tutti` · `Solo necessari` · `Personalizza`
+- Pulsanti: `Accetta tutti` (rosso) · `Solo necessari` (outline) · `Personalizza` (ghost)
 - Preferenze salvate in `localStorage` key `assetra_cookie_consent`
-- Il social feed (e futuri embed) si carica SOLO se l'utente ha accettato i cookie Marketing
-- Classi: `.cookie-banner`, `.cookie-modal`
+- Il social feed si carica SOLO se accettati cookie Marketing
 
 ### Privacy & Legal Pages
-- Crea pagine/sezioni: `privacy-policy.html` e `cookie-policy.html`
-- Testo placeholder professionale conforme GDPR (da revisionare con legale)
-- Link nel footer
+- `privacy-policy.html` e `cookie-policy.html`
+- Stesso tema dark del sito principale
+- Testo placeholder professionale conforme GDPR
 
 ### Form GDPR
 - Checkbox obbligatoria: *"Ho letto e accetto la [Privacy Policy]"*
 - Campo opzionale: consenso marketing
-- Non inviare form senza consenso privacy
+- Blocco submit senza consenso privacy
 
 ---
 
 ## SEO
 
 - `<title>`: `ASSETRA | Arredo Contract e Interior Design di Eccellenza — Retail, Hospitality, Uffici`
-- `<meta name="description">`: max 160 caratteri, keyword: arredo contract, interior design, rappresentanza mobili, retail, hospitality
-- Open Graph tags (`og:title`, `og:description`, `og:image`, `og:url`)
-- Struttura heading semantica: un solo `<h1>` per pagina, gerarchia `h2 → h3` rispettata
-- `alt` text descrittivi su tutte le immagini
-- `lang="it"` sul `<html>`, gestione `lang` per switch EN
-- Sitemap `sitemap.xml` (anche solo statica)
-- `robots.txt` base
+- `<meta name="description">`: max 160 caratteri, keyword: arredo contract, interior design, rappresentanza mobili
+- Open Graph tags completi
+- Struttura heading semantica rigorosa
+- `alt` text su tutte le immagini
+- `lang="it"` sull'`<html>`
+- `sitemap.xml` e `robots.txt`
 
 ---
 
@@ -168,20 +175,20 @@ Implementa obbligatoriamente:
 /* Mobile first */
 /* sm: 640px | md: 768px | lg: 1024px | xl: 1280px | 2xl: 1536px */
 ```
-- Navbar: hamburger sotto `lg`
-- Hero: font size fluido con `clamp()`
-- Grid sezioni: 1 col mobile → 2 col tablet → 3 col desktop
-- Immagini: `object-fit: cover` sempre, `loading="lazy"` su tutte eccetto hero
+- Navbar mobile: hamburger → fullscreen overlay
+- Font fluidi con `clamp()` — i titoli Cinzel scalano drammaticamente
+- Grid: 1 col mobile → 2 tablet → 3 desktop
+- Decorazioni SVG: nascoste o semplificate su mobile
 
 ---
 
 ## Future-Proofing
 
-- Struttura HTML modulare: ogni sezione è un `<section id="...">` autonomo
-- CSS organizzato: custom properties globali in `:root`, nessun valore hardcoded
-- JS: nessuna dipendenza globale, tutto in IIFE o moduli ES6
-- Social feed: il componente è già strutturato, basta sostituire il placeholder con l'SDK reale
-- Commenti `<!-- FUTURE: ... -->` nei punti di integrazione futura
+- Struttura modulare per sezione
+- CSS custom properties globali in `:root`
+- JS in moduli ES6, nessuna dipendenza CDN esterna
+- Social feed strutturato per sostituzione con SDK reale
+- Commenti `<!-- FUTURE: ... -->` nei punti di integrazione
 
 ---
 
@@ -203,7 +210,8 @@ assetra/
 │   ├── images/
 │   │   └── (placeholder references)
 │   └── svg/
-│       └── logo.svg
+│       ├── logo.svg
+│       └── decorations.svg
 ├── sitemap.xml
 ├── robots.txt
 └── CLAUDE.md
@@ -213,85 +221,12 @@ assetra/
 
 ## Image Guidelines (Stock)
 
-### Unsplash API — Fetch automatico durante il build
+Usa immagini stock con toni scuri, contrastati, atmosferici:
+- Hero: `luxury dark interior architecture`, `dramatic hospitality lounge night`
+- Portfolio: `dark moody office interior`, `luxury retail store night`, `upscale hotel lobby`
+- About: `premium furniture showroom dark`, `design consultation luxury`
 
-Usa l'**Unsplash API** per reperire immagini contestualizzate, royalty-free e di alta qualità.
-
-**Setup:**
-1. Registra una chiave API gratuita su https://unsplash.com/developers
-2. Aggiungi la chiave come variabile d'ambiente o nel file `.env`: `UNSPLASH_ACCESS_KEY=your_key_here`
-3. Non committare mai la chiave in chiaro nel codice
-
-**Script di fetch immagini (`scripts/fetch-images.js`):**
-Crea uno script Node.js da eseguire una tantum per scaricare le immagini nella cartella `assets/images/`:
-
-```js
-// scripts/fetch-images.js
-// Run with: node scripts/fetch-images.js
-const https = require('https');
-const fs = require('fs');
-const path = require('path');
-
-const ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY;
-const OUTPUT_DIR = path.join(__dirname, '../assets/images');
-
-const imagesToFetch = [
-  { query: 'luxury office interior design',       filename: 'hero-main.jpg',              w: 1920, h: 1080 },
-  { query: 'contemporary hospitality lounge',     filename: 'hero-alt.jpg',               w: 1920, h: 1080 },
-  { query: 'elegant interior design consultation',filename: 'about-main.jpg',             w: 1200, h: 800  },
-  { query: 'modern retail interior design',       filename: 'portfolio-retail-01.jpg',    w: 800,  h: 600  },
-  { query: 'luxury hotel lobby interior',         filename: 'portfolio-hospitality-01.jpg',w: 800, h: 600  },
-  { query: 'corporate office furniture premium',  filename: 'portfolio-office-01.jpg',    w: 800,  h: 600  },
-  { query: 'high end furniture showroom',         filename: 'portfolio-retail-02.jpg',    w: 800,  h: 600  },
-  { query: 'boutique hotel suite interior',       filename: 'portfolio-hospitality-02.jpg',w: 800, h: 600  },
-  { query: 'executive office design minimal',     filename: 'portfolio-office-02.jpg',    w: 800,  h: 600  },
-  { query: 'luxury interior design detail',       filename: 'services-bg.jpg',            w: 1200, h: 700  },
-];
-
-async function fetchImage({ query, filename, w, h }) {
-  const url = `https://api.unsplash.com/photos/random?query=${encodeURIComponent(query)}&orientation=landscape&client_id=${ACCESS_KEY}`;
-  // fetch JSON → get urls.regular → download file
-  // Implementa il download con https.get() e fs.createWriteStream()
-  console.log(`Fetching: ${filename} (query: "${query}")`);
-}
-
-if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
-imagesToFetch.forEach(fetchImage);
-```
-
-**Fallback automatico (se API non disponibile):**
-Se `UNSPLASH_ACCESS_KEY` non è impostata, usa URL Picsum con seed fisso per avere immagini consistenti:
-```js
-// Fallback URL pattern
-`https://picsum.photos/seed/${filename.replace('.jpg','')}/{w}/{h}`
-```
-
-**Nel codice HTML:**
-Usa sempre path locali `assets/images/nome-file.jpg` — mai URL Unsplash diretti in produzione (violano i ToS se non si traccia il download).
-
-**Query contestualizzate per ASSETRA:**
-| Sezione | Query consigliata |
-|---|---|
-| Hero principale | `luxury office interior design` |
-| Hero alternativo | `contemporary hospitality lounge light` |
-| Chi siamo | `elegant interior design studio consultation` |
-| Portfolio Retail | `modern retail store interior design` |
-| Portfolio Hospitality | `luxury hotel lobby boutique` |
-| Portfolio Uffici | `premium corporate office furniture` |
-| Servizi background | `high end furniture detail texture` |
-
-**Attributi obbligatori su ogni `<img>`:**
-```html
-<img
-  src="assets/images/hero-main.jpg"
-  alt="Descrizione contestuale SEO-friendly"
-  width="1920"
-  height="1080"
-  loading="lazy"   <!-- lazy su tutto tranne hero above-the-fold -->
-  decoding="async"
-/>
-```
-Usa `loading="eager"` solo sull'immagine hero principale per evitare LCP penalizzato.
+Converti o filtra le immagini con CSS `filter: brightness(0.7) contrast(1.1)` dove necessario.
 
 ---
 
@@ -299,10 +234,10 @@ Usa `loading="eager"` solo sull'immagine hero principale per evitare LCP penaliz
 
 Genera tutti i testi in **italiano** (con versione inglese in attributi `data-en="..."`).
 
-**Tono:** Autorevole ma accessibile. Mai tecnico o freddo. Trasmetti cura, eccellenza, relazione.  
-**Keywords SEO da includere naturalmente:** arredo contract, interior design, rappresentanza mobili, soluzioni d'arredo, retail, hospitality, uffici, spazi professionali, arredo su misura, eccellenza italiana.
+**Tono:** Imperiale, visionario, senza concessioni alla mediocrità. Ogni parola deve pesare come pietra.  
+**Keywords SEO:** arredo contract, interior design, rappresentanza mobili, soluzioni d'arredo, retail, hospitality, uffici, eccellenza italiana.
 
 **Tagline suggerite:**
-- *"L'eccellenza prende forma."*
-- *"Spazi che parlano di te."*
-- *"Rappresentiamo il meglio, per i tuoi spazi."*
+- *"L'ECCELLENZA PRENDE FORMA."*
+- *"SPAZI CHE DURANO NEL TEMPO."*
+- *"IL MEGLIO. SENZA COMPROMESSI."*
