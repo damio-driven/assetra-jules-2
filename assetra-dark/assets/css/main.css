@@ -1,0 +1,229 @@
+:root {
+  --color-bg:          #0D0D0B;  /* nero quasi assoluto, leggermente caldo */
+  --color-surface:     #141412;  /* superficie card/sezioni */
+  --color-surface-alt: #1C1C19;  /* alternanza sezioni */
+  --color-text:        #F0EDE6;  /* bianco avorio — mai bianco puro */
+  --color-text-muted:  #8A8880;
+  --color-accent:      #C8102E;  /* rosso ASSETRA — il sigillo */
+  --color-accent-glow: rgba(200,16,46,0.15); /* alone rosso per effetti */
+  --color-gold:        #B8965A;  /* oro romano — per dettagli epigrafici */
+  --color-border:      #2A2A26;
+  --color-border-gold: rgba(184,150,90,0.3);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  background-blend-mode: overlay;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--color-bg);
+  opacity: 0.98;
+  z-index: -1;
+  pointer-events: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel', serif;
+}
+
+.font-cinzel { font-family: 'Cinzel', serif; }
+.font-cormorant { font-family: 'Cormorant Garamond', serif; }
+
+.text-gold { color: var(--color-gold); }
+.text-accent { color: var(--color-accent); }
+.bg-surface { background-color: var(--color-surface); }
+.bg-surface-alt { background-color: var(--color-surface-alt); }
+.border-gold { border-color: var(--color-border-gold); }
+.border-gold-solid { border-color: var(--color-gold); }
+
+/* Typography */
+.epigraph-label {
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.75rem;
+  color: var(--color-gold);
+}
+
+.hero-headline {
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1.1;
+  letter-spacing: 0.05em;
+}
+
+.hero-headline .dot {
+  color: var(--color-accent);
+}
+
+.reveal-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.reveal-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero specific */
+.hero-overlay {
+  background: linear-gradient(to bottom, rgba(13,13,11,0.4) 0%, rgba(13,13,11,0.8) 100%);
+}
+
+.hero-img {
+  filter: brightness(0.65) contrast(1.1);
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Decorators */
+.line-separator {
+  height: 1px;
+  background-color: var(--color-border-gold);
+  width: 100%;
+}
+
+.gold-line-vertical {
+  width: 1px;
+  background-color: var(--color-gold);
+  height: 0;
+  transition: height 1.5s ease;
+}
+.gold-line-vertical.visible {
+  height: 100px;
+}
+
+/* Service cards */
+.service-card {
+  border: 1px solid var(--color-border-gold);
+  background-color: transparent;
+  transition: all 0.4s ease;
+}
+
+.service-card:hover {
+  border-color: var(--color-gold);
+  background-color: var(--color-surface);
+  transform: translateY(-5px);
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 15px; height: 15px;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  transition: all 0.4s ease;
+}
+
+.service-card:hover::after {
+  border-top-color: var(--color-accent);
+  border-right-color: var(--color-accent);
+}
+
+/* Buttons */
+.btn-outline-accent {
+  border: 1px solid var(--color-accent);
+  color: var(--color-text);
+  transition: all 0.3s ease;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.btn-outline-accent:hover {
+  background-color: var(--color-accent);
+  color: white;
+  box-shadow: 0 0 15px var(--color-accent-glow);
+}
+
+.btn-ghost-gold {
+  color: var(--color-gold);
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.btn-ghost-gold::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-gold);
+  transition: width 0.3s ease;
+}
+
+.btn-ghost-gold:hover::after {
+  width: 100%;
+}
+
+/* Form */
+.input-lapideo {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-border-gold);
+  color: var(--color-text);
+  font-family: 'Raleway', sans-serif;
+  padding: 10px 0;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.input-lapideo:focus {
+  outline: none;
+  border-bottom-color: var(--color-gold);
+}
+
+.input-lapideo::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* Images filters */
+.portfolio-img { filter: brightness(0.75) contrast(1.05) saturate(0.8); }
+.about-img     { filter: brightness(0.7) contrast(1.1); }
+
+/* Clip path for about image */
+.clip-path-angled {
+  clip-path: polygon(0 0, 100% 5%, 95% 100%, 5% 95%);
+}
+
+/* Nav */
+#navbar {
+  transition: background-color 0.4s ease, backdrop-filter 0.4s ease;
+}
+#navbar.scrolled {
+  background-color: rgba(13, 13, 11, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border-gold);
+}
+
+/* Typewriter */
+.typewriter-text {
+  border-right: 2px solid var(--color-gold);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--color-gold); }
+}
