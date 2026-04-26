@@ -70,29 +70,30 @@
     </div>
 
     <!-- Hero Section -->
-    <section id="hero" class="relative min-h-screen flex items-center pt-20">
-        <div class="max-w-[1600px] mx-auto w-full px-6 md:px-12 flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
+    <section id="hero" class="relative min-h-screen flex items-center pt-24 pb-12">
+        <div class="max-w-[1800px] mx-auto w-full px-6 md:px-12 flex flex-col lg:flex-row items-center gap-16 lg:gap-32">
 
-            <div class="w-full lg:w-5/12 z-10 pt-12 lg:pt-0">
-                <h1 class="hero-headline font-cormorant text-[#1A1A18] mb-8 reveal-up">
-                    L'eccellenza prende forma<span class="dot">.</span>
+            <div class="w-full lg:w-5/12 z-10 pt-12 lg:pt-0 relative">
+                <div class="absolute -top-32 -left-16 text-[20rem] font-cormorant text-[#F0F0F0] opacity-50 select-none z-[-1]">A.</div>
+                <h1 class="hero-headline font-cormorant text-[#0A0A0A] mb-10 reveal-up">
+                    L'eleganza <br>assoluta<span class="dot">.</span>
                 </h1>
-                <p class="text-lg md:text-xl text-[#7A776F] font-light mb-12 max-w-md leading-relaxed reveal-up" style="transition-delay: 0.2s;">
-                    Rappresentiamo le migliori soluzioni di arredo contract per retail, hospitality e spazi professionali. Unendo design contemporaneo e qualità senza compromessi.
+                <p class="text-xl md:text-2xl text-[#888888] font-light mb-14 max-w-lg leading-relaxed reveal-up" style="transition-delay: 0.2s;">
+                    Curiamo spazi che respirano. Design rarefatto, purezza formale e rappresentanza di eccellenza per l'interior design di lusso.
                 </p>
-                <div class="flex gap-8 items-center reveal-up" style="transition-delay: 0.4s;">
-                    <a href="#servizi" class="btn-outline-accent px-8 py-3 text-sm uppercase tracking-widest">Scopri le soluzioni</a>
+                <div class="flex gap-10 items-center reveal-up" style="transition-delay: 0.4s;">
+                    <a href="#servizi" class="btn-outline-accent px-10 py-4 text-xs uppercase tracking-[0.2em] hover:shadow-xl hover:-translate-y-1 transition-all">Esplora l'invisibile</a>
                 </div>
             </div>
 
-            <div class="w-full lg:w-7/12 relative h-[60vh] lg:h-[85vh] reveal-up" style="transition-delay: 0.3s;">
-                <img src="https://picsum.photos/seed/assetralight1/1200/900" alt="Luxury office interior design" class="w-full h-full object-cover rounded-sm" loading="eager" decoding="async">
-                <div class="absolute inset-0 hero-overlay rounded-sm"></div>
+            <div class="w-full lg:w-7/12 relative h-[70vh] lg:h-[90vh] reveal-up" style="transition-delay: 0.3s;">
+                <img src="https://picsum.photos/seed/assetralight1/1200/1600" alt="Minimalist luxury interior design" class="w-full h-full object-cover shadow-[0_30px_60px_rgba(0,0,0,0.05)] transition-transform duration-[2s] hover:scale-105" loading="eager" decoding="async" style="object-position: top;">
+                <div class="absolute inset-0 bg-[#FAFAFA] mix-blend-color opacity-20"></div>
 
                 <!-- Scroll Indicator -->
-                <div class="absolute bottom-0 left-8 hidden lg:flex flex-col items-center scroll-indicator-container">
-                    <span class="text-[10px] uppercase tracking-widest text-[#1A1A18] rotate-90 mb-12 font-medium">Scroll</span>
-                    <div class="scroll-indicator"></div>
+                <div class="absolute -bottom-10 -left-10 hidden lg:flex flex-col items-center scroll-indicator-container">
+                    <span class="text-[10px] uppercase tracking-[0.4em] text-[#0A0A0A] rotate-90 mb-16 font-medium">Scopri</span>
+                    <div class="scroll-indicator bg-[#0A0A0A] w-[1px]"></div>
                 </div>
             </div>
 
@@ -100,39 +101,40 @@
     </section>
 
     <!-- About Section -->
-    <section id="chi-siamo" class="py-32 bg-surface bg-pattern">
-        <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col lg:flex-row gap-20 items-center">
+    <section id="chi-siamo" class="py-40 bg-surface bg-pattern relative overflow-hidden">
+        <div class="absolute -right-20 top-20 text-[15rem] font-cormorant text-[#FAFAFA] select-none z-0">Essence</div>
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col lg:flex-row gap-24 items-center relative z-10">
 
-            <div class="lg:w-1/2 reveal-up order-2 lg:order-1">
+            <div class="lg:w-5/12 reveal-up order-2 lg:order-1">
                 <div class="about-image-wrapper">
-                    <img src="https://picsum.photos/seed/assetralight2/800/1000" alt="Elegant interior design consultation" class="w-full h-auto object-cover relative z-10" loading="lazy">
+                    <img src="https://picsum.photos/seed/assetralight2/800/1200" alt="Elegant interior design consultation" class="w-full h-[600px] object-cover relative z-10 shadow-2xl" loading="lazy">
                 </div>
             </div>
 
-            <div class="lg:w-1/2 reveal-up order-1 lg:order-2" style="transition-delay: 0.2s;">
-                <p class="eyebrow-label mb-6">La nostra essenza</p>
-                <h2 class="font-cormorant text-4xl md:text-5xl text-[#1A1A18] leading-tight mb-8">
-                    Rappresentanza di eccellenza per spazi che ispirano.
+            <div class="lg:w-7/12 reveal-up order-1 lg:order-2" style="transition-delay: 0.2s;">
+                <p class="eyebrow-label mb-8 tracking-[0.3em] text-[#D4AF37]">L'Arte del Sottrarre</p>
+                <h2 class="font-cormorant text-5xl md:text-7xl text-[#0A0A0A] leading-[1.1] mb-10">
+                    Spazi che non hanno <br>bisogno di fare rumore.
                 </h2>
 
-                <div class="space-y-6 text-[#7A776F] font-light text-lg mb-12">
+                <div class="space-y-8 text-[#888888] font-light text-xl mb-14 max-w-2xl leading-relaxed">
                     <p>
-                        ASSETRA è un'agenzia specializzata nell'arredo contract e nell'interior design di alto livello. Il nostro obiettivo è affiancare studi di architettura, general contractor e clienti finali nella realizzazione di spazi unici.
+                        ASSETRA è la firma silenziosa dietro gli spazi più esclusivi. Non ci limitiamo a fornire arredo contract: orchestrariamo luce, materia e vuoto per studi di architettura e general contractor.
                     </p>
                     <p>
-                        Attraverso una partnership solida con brand leader come Arken Group, trasformiamo concetti progettuali in realtà tangibili. La nostra forza risiede nella cura dei dettagli, nell'ascolto delle esigenze e in una profonda conoscenza dei materiali e delle dinamiche produttive.
+                        In partnership con l'eccellenza assoluta di Arken Group, trasformiamo astrazioni progettuali in volumi tangibili. La nostra ossessione risiede nella purezza del dettaglio e in un dominio totale dei materiali e delle dinamiche produttive.
                     </p>
                 </div>
 
                 <!-- Stats -->
-                <div class="flex gap-16 border-t border-[#E2DED8] pt-8">
+                <div class="flex gap-20 border-t border-[#EAEAEA] pt-12 mt-12">
                     <div>
-                        <div class="font-cormorant text-5xl text-[#1A1A18] mb-1"><span class="stat-number" data-target="20">0</span>+</div>
-                        <div class="text-xs text-[#7A776F] uppercase tracking-widest font-medium">Anni di Esperienza</div>
+                        <div class="font-cormorant text-6xl text-[#0A0A0A] mb-2"><span class="stat-number" data-target="20">0</span>+</div>
+                        <div class="text-[10px] text-[#888888] uppercase tracking-[0.2em] font-medium">Anni di Ricerca</div>
                     </div>
                     <div>
-                        <div class="font-cormorant text-5xl text-[#1A1A18] mb-1"><span class="stat-number" data-target="350">0</span>+</div>
-                        <div class="text-xs text-[#7A776F] uppercase tracking-widest font-medium">Progetti Gestiti</div>
+                        <div class="font-cormorant text-6xl text-[#0A0A0A] mb-2"><span class="stat-number" data-target="150">0</span>+</div>
+                        <div class="text-[10px] text-[#888888] uppercase tracking-[0.2em] font-medium">Opere Concluse</div>
                     </div>
                 </div>
             </div>
@@ -141,62 +143,62 @@
     </section>
 
     <!-- Services Section -->
-    <section id="servizi" class="py-32 bg-bg relative">
-        <div class="max-w-7xl mx-auto px-6 md:px-12">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-20 reveal-up">
-                <div class="max-w-2xl">
-                    <p class="eyebrow-label mb-4">Competenze</p>
-                    <h2 class="font-cormorant text-4xl md:text-5xl text-[#1A1A18] leading-tight">
-                        Soluzioni su misura per ogni settore.
+    <section id="servizi" class="py-40 bg-bg relative border-t border-[#EAEAEA]">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-24 reveal-up">
+                <div class="max-w-3xl">
+                    <p class="eyebrow-label mb-6 tracking-[0.3em] text-[#D4AF37]">I Domini</p>
+                    <h2 class="font-cormorant text-5xl md:text-7xl text-[#0A0A0A] leading-[1.1]">
+                        Materia plasmata <br>per ogni settore.
                     </h2>
                 </div>
-                <div class="mt-6 md:mt-0">
-                    <p class="text-[#7A776F] font-light max-w-sm">Dall'ideazione alla fornitura, seguiamo ogni fase per garantire risultati impeccabili.</p>
+                <div class="mt-8 md:mt-0">
+                    <p class="text-[#888888] font-light max-w-sm text-lg">Dalla visione pura alla consistenza finale, garantiamo il dominio assoluto dell'opera.</p>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <!-- Card 1 -->
-                <div class="service-card p-10 reveal-up" style="transition-delay: 0.1s;">
-                    <div class="w-12 h-12 rounded-full bg-[#F7F5F2] flex items-center justify-center mb-8 border border-[#E2DED8]">
-                        <svg class="w-5 h-5 text-[#1A1A18]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                <div class="service-card p-14 reveal-up shadow-sm hover:shadow-2xl" style="transition-delay: 0.1s;">
+                    <div class="w-16 h-16 rounded-full bg-[#FAFAFA] flex items-center justify-center mb-10 border border-[#EAEAEA]">
+                        <svg class="w-6 h-6 text-[#0A0A0A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
                     </div>
-                    <h3 class="font-cormorant text-2xl text-[#1A1A18] mb-4">Retail</h3>
-                    <p class="text-[#7A776F] font-light text-sm leading-relaxed">
-                        Arredi espositivi e sistemi su misura per boutique e spazi commerciali alto di gamma. Creiamo scenari per valorizzare il prodotto.
+                    <h3 class="font-cormorant text-4xl text-[#0A0A0A] mb-6">Retail</h3>
+                    <p class="text-[#888888] font-light text-base leading-relaxed">
+                        Arredi espositivi e sistemi su misura per boutique e spazi commerciali alto di gamma. Creiamo scenari per valorizzare il prodotto con purezza e silenzio.
                     </p>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="service-card p-10 reveal-up" style="transition-delay: 0.2s;">
-                    <div class="w-12 h-12 rounded-full bg-[#F7F5F2] flex items-center justify-center mb-8 border border-[#E2DED8]">
-                        <svg class="w-5 h-5 text-[#1A1A18]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                <div class="service-card p-14 reveal-up shadow-sm hover:shadow-2xl" style="transition-delay: 0.2s;">
+                    <div class="w-16 h-16 rounded-full bg-[#FAFAFA] flex items-center justify-center mb-10 border border-[#EAEAEA]">
+                        <svg class="w-6 h-6 text-[#0A0A0A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
                     </div>
-                    <h3 class="font-cormorant text-2xl text-[#1A1A18] mb-4">Hospitality</h3>
-                    <p class="text-[#7A776F] font-light text-sm leading-relaxed">
-                        Soluzioni eleganti e durevoli per hotel, lounge e spazi di accoglienza, dove comfort e design contemporaneo si incontrano.
+                    <h3 class="font-cormorant text-4xl text-[#0A0A0A] mb-6">Hospitality</h3>
+                    <p class="text-[#888888] font-light text-base leading-relaxed">
+                        Arredi per hotel di lusso, ristoranti e lounge. Spazi progettati per accogliere con pura raffinatezza, luce e comfort assoluto.
                     </p>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="service-card p-10 reveal-up" style="transition-delay: 0.3s;">
-                    <div class="w-12 h-12 rounded-full bg-[#F7F5F2] flex items-center justify-center mb-8 border border-[#E2DED8]">
-                        <svg class="w-5 h-5 text-[#1A1A18]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                <div class="service-card p-14 reveal-up shadow-sm hover:shadow-2xl" style="transition-delay: 0.3s;">
+                    <div class="w-16 h-16 rounded-full bg-[#FAFAFA] flex items-center justify-center mb-10 border border-[#EAEAEA]">
+                        <svg class="w-6 h-6 text-[#0A0A0A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
                     </div>
-                    <h3 class="font-cormorant text-2xl text-[#1A1A18] mb-4">Uffici e Contract</h3>
-                    <p class="text-[#7A776F] font-light text-sm leading-relaxed">
-                        Arredo direzionale e spazi operativi premium. Ambienti di lavoro progettati per ispirare efficienza e rappresentanza.
+                    <h3 class="font-cormorant text-4xl text-[#0A0A0A] mb-6">Uffici & Contract</h3>
+                    <p class="text-[#888888] font-light text-base leading-relaxed">
+                        Soluzioni direzionali e operative per spazi professionali. Estetica rigorosa unita a funzionalità ed eleganza formale assoluta.
                     </p>
                 </div>
 
                 <!-- Card 4 -->
-                <div class="service-card p-10 reveal-up" style="transition-delay: 0.4s;">
-                    <div class="w-12 h-12 rounded-full bg-[#F7F5F2] flex items-center justify-center mb-8 border border-[#E2DED8]">
-                        <svg class="w-5 h-5 text-[#1A1A18]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                <div class="service-card p-14 reveal-up shadow-sm hover:shadow-2xl" style="transition-delay: 0.4s;">
+                    <div class="w-16 h-16 rounded-full bg-[#FAFAFA] flex items-center justify-center mb-10 border border-[#EAEAEA]">
+                        <svg class="w-6 h-6 text-[#0A0A0A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
                     </div>
-                    <h3 class="font-cormorant text-2xl text-[#1A1A18] mb-4">Spazi Professionali</h3>
-                    <p class="text-[#7A776F] font-light text-sm leading-relaxed">
-                        Arredi per studi legali, notarili e direzioni. Materiali nobili e fattura impeccabile per esprimere autorevolezza.
+                    <h3 class="font-cormorant text-4xl text-[#0A0A0A] mb-6">Spazi Esclusivi</h3>
+                    <p class="text-[#888888] font-light text-base leading-relaxed">
+                        Arredi per studi legali, direzioni generali e spazi di rappresentanza. Materiali nobili, forme assolute.
                     </p>
                 </div>
 
@@ -212,13 +214,13 @@
                 </div>
 
                 <!-- Card 6 -->
-                <div class="service-card p-10 reveal-up" style="transition-delay: 0.6s;">
-                    <div class="w-12 h-12 rounded-full bg-[#F7F5F2] flex items-center justify-center mb-8 border border-[#E2DED8]">
-                        <svg class="w-5 h-5 text-[#1A1A18]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                <div class="service-card p-14 reveal-up shadow-sm hover:shadow-2xl" style="transition-delay: 0.5s;">
+                    <div class="w-16 h-16 rounded-full bg-[#FAFAFA] flex items-center justify-center mb-10 border border-[#EAEAEA]">
+                        <svg class="w-6 h-6 text-[#0A0A0A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path></svg>
                     </div>
-                    <h3 class="font-cormorant text-2xl text-[#1A1A18] mb-4">Progettazione</h3>
-                    <p class="text-[#7A776F] font-light text-sm leading-relaxed">
-                        Supporto tecnico e sviluppo esecutivo in sinergia con i brand rappresentati, per trasformare il concept in opera finita.
+                    <h3 class="font-cormorant text-4xl text-[#0A0A0A] mb-6">Ingegnerizzazione</h3>
+                    <p class="text-[#888888] font-light text-base leading-relaxed">
+                        Sviluppo esecutivo in simbiosi totale con la filiera produttiva. L'idea diviene materia, senza compromessi.
                     </p>
                 </div>
             </div>
@@ -226,59 +228,84 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="py-32 bg-surface">
-        <div class="max-w-[1600px] mx-auto px-6 md:px-12">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal-up">
+    <section id="portfolio" class="py-40 bg-surface">
+        <div class="max-w-[1800px] mx-auto px-6 md:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-24 reveal-up">
                 <div>
-                    <h2 class="font-cormorant text-4xl md:text-5xl text-[#1A1A18]">
-                        Progetti selezionati.
+                    <p class="eyebrow-label mb-6 tracking-[0.3em] text-[#D4AF37]">La Materia</p>
+                    <h2 class="font-cormorant text-5xl md:text-7xl text-[#0A0A0A]">
+                        Opere silenziose.
                     </h2>
                 </div>
-                <div class="mt-8 md:mt-0 flex flex-wrap gap-6">
-                    <button class="text-sm font-medium text-[#1A1A18] border-b border-[#C8102E] pb-1">Tutti</button>
-                    <button class="text-sm text-[#7A776F] hover:text-[#1A1A18] transition-colors pb-1">Retail</button>
-                    <button class="text-sm text-[#7A776F] hover:text-[#1A1A18] transition-colors pb-1">Hospitality</button>
-                    <button class="text-sm text-[#7A776F] hover:text-[#1A1A18] transition-colors pb-1">Uffici</button>
+                <div class="mt-8 md:mt-0 flex flex-wrap gap-10">
+                    <button class="text-xs font-medium text-[#0A0A0A] border-b border-[#E60000] pb-2 uppercase tracking-[0.2em]">Tutti</button>
+                    <button class="text-xs text-[#888888] hover:text-[#0A0A0A] transition-colors pb-2 uppercase tracking-[0.2em]">Retail</button>
+                    <button class="text-xs text-[#888888] hover:text-[#0A0A0A] transition-colors pb-2 uppercase tracking-[0.2em]">Hospitality</button>
+                    <button class="text-xs text-[#888888] hover:text-[#0A0A0A] transition-colors pb-2 uppercase tracking-[0.2em]">Uffici</button>
                 </div>
             </div>
 
             <!-- Asymmetric Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-10">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-20">
                 <!-- Item 1: Large -->
-                <div class="md:col-span-8 portfolio-card cursor-pointer reveal-up" style="transition-delay: 0.1s;">
-                    <div class="overflow-hidden rounded-sm aspect-[4/3] mb-4">
-                        <img src="https://picsum.photos/seed/assetralight3/1000/750" alt="Modern retail store" class="w-full h-full object-cover" loading="lazy">
+                <div class="md:col-span-8 portfolio-card cursor-pointer reveal-up group" style="transition-delay: 0.1s;">
+                    <div class="overflow-hidden aspect-[4/3] mb-6">
+                        <img src="https://picsum.photos/seed/assetralight3/1400/1000" alt="Modern retail store" class="w-full h-full object-cover filter grayscale hover:grayscale-0" loading="lazy">
                     </div>
-                    <p class="eyebrow-label mb-1">Retail</p>
-                    <h4 class="font-cormorant text-2xl text-[#1A1A18]">Boutique Flagship, Milano</h4>
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <p class="eyebrow-label mb-2 text-[#D4AF37]">Retail</p>
+                            <h4 class="font-cormorant text-4xl text-[#0A0A0A]">Boutique Flagship, Milano</h4>
+                        </div>
+                        <span class="text-[#E60000] opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-x-[-10px] group-hover:translate-x-0">— Scopri</span>
+                    </div>
                 </div>
 
                 <!-- Item 2: Small portrait -->
-                <div class="md:col-span-4 portfolio-card cursor-pointer reveal-up" style="transition-delay: 0.2s;">
-                    <div class="overflow-hidden rounded-sm aspect-[3/4] mb-4">
-                        <img src="https://picsum.photos/seed/assetralight4/600/800" alt="Corporate office furniture" class="w-full h-full object-cover" loading="lazy">
+                <div class="md:col-span-4 portfolio-card cursor-pointer reveal-up group md:mt-32" style="transition-delay: 0.2s;">
+                    <div class="overflow-hidden aspect-[3/4] mb-6">
+                        <img src="https://picsum.photos/seed/assetralight4/600/800" alt="Corporate office furniture" class="w-full h-full object-cover filter grayscale hover:grayscale-0" loading="lazy">
                     </div>
-                    <p class="eyebrow-label mb-1">Uffici</p>
-                    <h4 class="font-cormorant text-2xl text-[#1A1A18]">Headquarters Corporate</h4>
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <p class="eyebrow-label mb-2 text-[#D4AF37]">Uffici</p>
+                            <h4 class="font-cormorant text-3xl text-[#0A0A0A]">Headquarters Corporate</h4>
+                        </div>
+                        <span class="text-[#E60000] opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-x-[-10px] group-hover:translate-x-0">— Scopri</span>
+                    </div>
                 </div>
 
                 <!-- Item 3: Small square -->
-                <div class="md:col-span-5 portfolio-card cursor-pointer reveal-up" style="transition-delay: 0.3s;">
-                    <div class="overflow-hidden rounded-sm aspect-square mb-4">
-                        <img src="https://picsum.photos/seed/assetralight5/800/800" alt="Luxury hotel lobby" class="w-full h-full object-cover" loading="lazy">
+                <div class="md:col-span-5 portfolio-card cursor-pointer reveal-up group" style="transition-delay: 0.3s;">
+                    <div class="overflow-hidden aspect-square mb-6">
+                        <img src="https://picsum.photos/seed/assetralight5/800/800" alt="Luxury hotel lobby" class="w-full h-full object-cover filter grayscale hover:grayscale-0" loading="lazy">
                     </div>
-                    <p class="eyebrow-label mb-1">Hospitality</p>
-                    <h4 class="font-cormorant text-2xl text-[#1A1A18]">Lounge Hotel 5 Stelle</h4>
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <p class="eyebrow-label mb-2 text-[#D4AF37]">Hospitality</p>
+                            <h4 class="font-cormorant text-3xl text-[#0A0A0A]">Lounge Hotel 5 Stelle</h4>
+                        </div>
+                        <span class="text-[#E60000] opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-x-[-10px] group-hover:translate-x-0">— Scopri</span>
+                    </div>
                 </div>
 
                 <!-- Item 4: Landscape -->
-                <div class="md:col-span-7 portfolio-card cursor-pointer reveal-up" style="transition-delay: 0.4s;">
-                    <div class="overflow-hidden rounded-sm aspect-[16/9] mb-4">
-                        <img src="https://picsum.photos/seed/assetralight6/1200/675" alt="High end furniture showroom" class="w-full h-full object-cover" loading="lazy">
+                <div class="md:col-span-7 portfolio-card cursor-pointer reveal-up group md:-mt-10" style="transition-delay: 0.4s;">
+                    <div class="overflow-hidden aspect-[16/9] mb-6">
+                        <img src="https://picsum.photos/seed/assetralight6/1200/675" alt="High end furniture showroom" class="w-full h-full object-cover filter grayscale hover:grayscale-0" loading="lazy">
                     </div>
-                    <p class="eyebrow-label mb-1">Retail</p>
-                    <h4 class="font-cormorant text-2xl text-[#1A1A18]">Concept Store, Roma</h4>
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <p class="eyebrow-label mb-2 text-[#D4AF37]">Retail</p>
+                            <h4 class="font-cormorant text-4xl text-[#0A0A0A]">Concept Store, Roma</h4>
+                        </div>
+                        <span class="text-[#E60000] opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-x-[-10px] group-hover:translate-x-0">— Scopri</span>
+                    </div>
                 </div>
+            </div>
+
+            <div class="mt-24 text-center reveal-up">
+                <a href="#" class="btn-link text-xs font-medium tracking-[0.3em] uppercase text-[#0A0A0A]">Esplora l'Archivio Completo</a>
             </div>
         </div>
     </section>

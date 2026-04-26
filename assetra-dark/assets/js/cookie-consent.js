@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     consentBanner.id = 'cookie-banner';
     // Style applied directly for simplicity since it's injected
     consentBanner.innerHTML = `
-        <div style="position: fixed; bottom: 0; left: 0; right: 0; background-color: var(--color-surface); border-top: 1px solid var(--color-border); padding: 20px; z-index: 9999; display: flex; flex-direction: column; md:flex-row; justify-content: space-between; align-items: center; box-shadow: 0 -4px 10px rgba(0,0,0,0.1);">
-            <div style="flex: 1; margin-bottom: 15px; max-width: 800px;">
+        <div style="position: fixed; bottom: 0; left: 0; right: 0; background-color: var(--color-surface); border-top: 1px solid var(--color-border); padding: 20px; z-index: 9999; display: flex; flex-direction: column; justify-content: space-between; align-items: center; box-shadow: 0 -4px 10px rgba(0,0,0,0.1);">
+            <div style="flex: 1; margin-bottom: 15px; max-width: 800px; text-align: center;">
                 <p style="font-size: 14px; margin: 0; line-height: 1.5; color: var(--color-text);">
                     Utilizziamo cookie necessari per il funzionamento del sito e, con il tuo consenso, cookie analitici e di marketing per migliorare la tua esperienza e mostrare contenuti personalizzati (come i social feed).
                     Consulta la nostra <a href="cookie-policy.html" style="text-decoration: underline; color: var(--color-accent);">Cookie Policy</a>.
