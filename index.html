@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSETRA Preview</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        a {
+            display: inline-block;
+            padding: 15px 30px;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: opacity 0.3s;
+        }
+        a:hover {
+            opacity: 0.8;
+        }
+        .btn-light {
+            background-color: #e0e0e0;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+        .btn-dark {
+            background-color: #111;
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>ASSETRA - Scelta Versione</h1>
+    <p>Seleziona la versione del sito da visualizzare:</p>
+    <div class="container">
+        <a href="assetra-light/index.html" class="btn-light">Versione Light (Soft/Luxury)</a>
+        <a href="assetra-dark/index.html" class="btn-dark">Versione Dark (Aggressiva/Roma)</a>
+    </div>
+</body>
+</html>

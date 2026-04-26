@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSETRA | Arredo Contract e Interior Design di Eccellenza — Retail, Hospitality, Uffici</title>
+    <meta name="description" content="ASSETRA è l'agenzia di rappresentanza d'eccellenza per soluzioni di interior design e arredo contract: retail, hospitality, uffici e spazi professionali.">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="ASSETRA | Arredo Contract e Interior Design di Eccellenza">
+    <meta property="og:description" content="ASSETRA è l'agenzia di rappresentanza d'eccellenza per soluzioni di interior design e arredo contract: retail, hospitality, uffici e spazi professionali.">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Cormorant+Garamond:ital,wght@1,300;1,400&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navbar -->
+    <header id="navbar" class="fixed top-0 w-full z-50 py-4 px-6 md:px-12 transition-all duration-400">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Logo SVG inline -->
+            <a href="#" class="flex items-center gap-1 z-50">
+                <svg width="180" height="40" viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="30" font-family="'Cinzel', serif" font-size="28" font-weight="600" fill="#F0EDE6" letter-spacing="0.1em">ASSETRA</text>
+                    <circle cx="160" cy="28" r="4" fill="#C8102E" />
+                </svg>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#chi-siamo" class="font-cinzel uppercase text-xs tracking-widest text-[#8A8880] hover:text-[#B8965A] transition-colors">Chi Siamo</a>
+                <a href="#servizi" class="font-cinzel uppercase text-xs tracking-widest text-[#8A8880] hover:text-[#B8965A] transition-colors">Servizi</a>
+                <a href="#portfolio" class="font-cinzel uppercase text-xs tracking-widest text-[#8A8880] hover:text-[#B8965A] transition-colors">Portfolio</a>
+                <a href="https://www.arkengroup.it/it" target="_blank" class="font-cinzel uppercase text-xs tracking-widest text-[#8A8880] hover:text-[#B8965A] transition-colors">Partner</a>
+                <a href="#contatti" class="font-cinzel uppercase text-xs tracking-widest text-[#F0EDE6] hover:text-[#C8102E] transition-colors">Contatti</a>
+
+                <div class="flex items-center gap-2 ml-4 border-l border-[#2A2A26] pl-6">
+                    <span class="font-cinzel text-xs text-[#F0EDE6] cursor-pointer">IT</span>
+                    <span class="text-[#8A8880] text-xs">/</span>
+                    <span class="font-cinzel text-xs text-[#8A8880] hover:text-[#F0EDE6] cursor-pointer transition-colors" data-en="EN">EN</span>
+                </div>
+            </nav>
+
+            <!-- Mobile Menu Btn -->
+            <button id="mobile-menu-btn" class="md:hidden text-[#F0EDE6] z-50 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="1" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Fullscreen Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#0D0D0B] z-40 transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col justify-center items-center">
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-[#F0EDE6] focus:outline-none">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="1" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <nav class="flex flex-col items-center gap-8">
+            <a href="#chi-siamo" class="mobile-nav-link font-cinzel text-2xl tracking-widest text-[#F0EDE6]">Chi Siamo</a>
+            <a href="#servizi" class="mobile-nav-link font-cinzel text-2xl tracking-widest text-[#F0EDE6]">Servizi</a>
+            <a href="#portfolio" class="mobile-nav-link font-cinzel text-2xl tracking-widest text-[#F0EDE6]">Portfolio</a>
+            <a href="#contatti" class="mobile-nav-link font-cinzel text-2xl tracking-widest text-[#C8102E]">Contatti</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://picsum.photos/seed/assetradark1/1920/1080" alt="Luxury interior design space" class="w-full h-full hero-img" loading="eager" decoding="async">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col md:flex-row items-center mt-20">
+            <div class="md:w-4/5">
+                <p class="epigraph-label mb-6 reveal-up">Rappresentanza di Eccellenza Assoluta</p>
+                <h1 class="font-cinzel font-black hero-headline text-[#F2EFE9] mb-4 reveal-up" style="transition-delay: 0.2s;">
+                    IL POTERE <br> DELL'ELEGANZA<span class="dot text-[#D00000]">.</span>
+                </h1>
+                <p class="font-cormorant italic text-3xl md:text-4xl text-[#7A7870] mb-12 max-w-3xl reveal-up" style="transition-delay: 0.4s; line-height: 1.3;">
+                    Selezioniamo e imponiamo le migliori soluzioni di arredo contract per il retail di lusso, hospitality e spazi professionali. Senza compromessi.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-8 reveal-up" style="transition-delay: 0.6s;">
+                    <a href="#servizi" class="btn-outline-accent px-10 py-5 text-sm inline-block text-center hover:scale-105">Esplora Soluzioni</a>
+                    <a href="#contatti" class="btn-ghost-gold px-10 py-5 text-sm inline-block text-center hover:scale-105">Parla con noi</a>
+                </div>
+            </div>
+
+            <div class="md:w-1/5 hidden md:flex justify-end items-center flex-col gap-6">
+                <div class="gold-line-vertical reveal-up" style="transition-delay: 1s;" style="height: 150px !important;"></div>
+                <span class="font-cinzel text-xs text-[#D4AF37] tracking-[0.4em] rotate-90 origin-left ml-6 whitespace-nowrap">SCROLL</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Separator -->
+    <div class="line-separator"></div>
+
+    <!-- About Section -->
+    <section id="chi-siamo" class="py-24 relative bg-surface">
+        <!-- Decorator SVG -->
+        <div class="absolute top-0 left-0 w-full overflow-hidden flex justify-center opacity-30 pointer-events-none">
+            <svg width="100%" height="20" viewBox="0 0 1000 20" preserveAspectRatio="none" fill="none" stroke="var(--color-gold)" stroke-width="1">
+                <path d="M0,10 L10,10 L10,0 L20,0 L20,20 L30,20 L30,10 L1000,10" />
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col lg:flex-row gap-16 items-center">
+            <div class="lg:w-1/2 reveal-up">
+                <h2 class="font-cinzel text-[#B8965A] text-lg tracking-[0.2em] mb-4">CHI SIAMO</h2>
+                <h3 class="font-cinzel text-4xl md:text-5xl text-[#F0EDE6] leading-tight mb-8">
+                    IL POTERE DELLA MATERIA E DEL DESIGN<span class="text-[#C8102E]">.</span>
+                </h3>
+                <blockquote class="font-cormorant italic text-2xl text-[#8A8880] border-l-2 border-[#B8965A] pl-6 mb-8 py-2">
+                    "Siamo il ponte tra la visione architettonica e la realizzazione dell'eccellenza, affiancando i professionisti nei progetti più ambiziosi."
+                </blockquote>
+                <p class="text-[#F0EDE6] font-light leading-relaxed mb-6">
+                    ASSETRA nasce con una missione precisa: elevare lo standard dell'arredo contract e dell'interior design. Come agenzia di rappresentanza esclusiva, il nostro partner d'eccellenza è Arken Group, leader nel settore.
+                </p>
+                <p class="text-[#F0EDE6] font-light leading-relaxed mb-12">
+                    Non vendiamo semplici mobili, offriamo soluzioni strutturate per retail, hospitality e uffici direzionali, dove ogni dettaglio è un'affermazione di prestigio.
+                </p>
+
+                <!-- Stats -->
+                <div class="flex gap-12 border-t border-[#2A2A26] pt-8">
+                    <div>
+                        <div class="font-cinzel text-4xl text-[#F0EDE6] mb-2"><span class="stat-number" data-target="20">0</span>+</div>
+                        <div class="font-cinzel text-xs text-[#8A8880] tracking-widest uppercase">Anni di Esperienza</div>
+                    </div>
+                    <div>
+                        <div class="font-cinzel text-4xl text-[#F0EDE6] mb-2"><span class="stat-number" data-target="500">0</span>+</div>
+                        <div class="font-cinzel text-xs text-[#8A8880] tracking-widest uppercase">Progetti Realizzati</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:w-1/2 reveal-up" style="transition-delay: 0.3s;">
+                <div class="relative">
+                    <!-- Decorator Box -->
+                    <div class="absolute -inset-6 border border-[#333333] z-0 transition-all duration-700 hover:border-[#D4AF37] hover:rotate-1"></div>
+                    <img src="https://picsum.photos/seed/assetradark2/800/1000" alt="Showroom di lusso" class="w-full h-auto object-cover about-img clip-path-angled relative z-10 shadow-[0_20px_50px_rgba(0,0,0,0.8)]" loading="lazy">
+                    <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-[#D00000] z-20 flex items-center justify-center rounded-sm">
+                        <span class="font-cinzel text-[#F2EFE9] text-3xl font-bold">A.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servizi" class="py-24 bg-surface-alt">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="text-center mb-20 reveal-up">
+                <p class="epigraph-label mb-4">Competenze</p>
+                <h2 class="font-cinzel text-4xl md:text-5xl text-[#F0EDE6]">
+                    SOLUZIONI CONTRACT<span class="text-[#C8102E]">.</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="service-card p-10 relative reveal-up" style="transition-delay: 0.1s;">
+                    <div class="font-cinzel text-5xl text-[#B8965A] opacity-30 absolute top-8 right-8">I</div>
+                    <h3 class="font-cinzel text-xl text-[#F0EDE6] mb-4 mt-8">Retail</h3>
+                    <div class="w-12 h-px bg-[#B8965A] mb-6"></div>
+                    <p class="text-[#8A8880] font-light leading-relaxed">
+                        Arredi espositivi e sistemi su misura per boutique e spazi commerciali alto di gamma. Creiamo scenari per valorizzare il prodotto.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="service-card p-10 relative reveal-up" style="transition-delay: 0.2s;">
+                    <div class="font-cinzel text-5xl text-[#B8965A] opacity-30 absolute top-8 right-8">II</div>
+                    <h3 class="font-cinzel text-xl text-[#F0EDE6] mb-4 mt-8">Hospitality</h3>
+                    <div class="w-12 h-px bg-[#B8965A] mb-6"></div>
+                    <p class="text-[#8A8880] font-light leading-relaxed">
+                        Soluzioni eleganti e durevoli per hotel di lusso, lounge e spazi di accoglienza, dove comfort e design monumentale si incontrano.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="service-card p-10 relative reveal-up" style="transition-delay: 0.3s;">
+                    <div class="font-cinzel text-5xl text-[#B8965A] opacity-30 absolute top-8 right-8">III</div>
+                    <h3 class="font-cinzel text-xl text-[#F0EDE6] mb-4 mt-8">Uffici e Contract</h3>
+                    <div class="w-12 h-px bg-[#B8965A] mb-6"></div>
+                    <p class="text-[#8A8880] font-light leading-relaxed">
+                        Arredo direzionale e spazi operativi premium. La rappresentanza aziendale passa attraverso l'eccellenza degli ambienti di lavoro.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="service-card p-10 relative reveal-up" style="transition-delay: 0.4s;">
+                    <div class="font-cinzel text-5xl text-[#B8965A] opacity-30 absolute top-8 right-8">IV</div>
+                    <h3 class="font-cinzel text-xl text-[#F0EDE6] mb-4 mt-8">Spazi Professionali</h3>
+                    <div class="w-12 h-px bg-[#B8965A] mb-6"></div>
+                    <p class="text-[#8A8880] font-light leading-relaxed">
+                        Librerie, boiserie e arredi tecnici per studi legali, notariili e direzioni generali. Materiali nobili e fattura impeccabile.
+                    </p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="service-card p-10 relative reveal-up" style="transition-delay: 0.5s;">
+                    <div class="font-cinzel text-5xl text-[#B8965A] opacity-30 absolute top-8 right-8">V</div>
+                    <h3 class="font-cinzel text-xl text-[#F0EDE6] mb-4 mt-8">Consulenza</h3>
+                    <div class="w-12 h-px bg-[#B8965A] mb-6"></div>
+                    <p class="text-[#8A8880] font-light leading-relaxed">
+                        Affiancamento agli studi di architettura nella scelta dei materiali e delle soluzioni tecniche ottimali per ogni specifica esigenza.
+                    </p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="service-card p-10 relative reveal-up" style="transition-delay: 0.6s;">
+                    <div class="font-cinzel text-5xl text-[#B8965A] opacity-30 absolute top-8 right-8">VI</div>
+                    <h3 class="font-cinzel text-xl text-[#F0EDE6] mb-4 mt-8">Progettazione</h3>
+                    <div class="w-12 h-px bg-[#B8965A] mb-6"></div>
+                    <p class="text-[#8A8880] font-light leading-relaxed">
+                        Supporto tecnico e sviluppo esecutivo in sinergia con i brand rappresentati, per trasformare il concept in opera finita.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24 relative bg-surface">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 mb-12 flex flex-col md:flex-row justify-between items-end reveal-up">
+            <div>
+                <p class="epigraph-label mb-4">Opere</p>
+                <h2 class="font-cinzel text-4xl md:text-5xl text-[#F0EDE6]">
+                    PROGETTI SELEZIONATI<span class="text-[#C8102E]">.</span>
+                </h2>
+            </div>
+            <div class="mt-8 md:mt-0 flex gap-6">
+                <button class="font-cinzel text-xs uppercase tracking-widest text-[#F0EDE6] border-b border-[#C8102E] pb-1">Tutti</button>
+                <button class="font-cinzel text-xs uppercase tracking-widest text-[#8A8880] hover:text-[#B8965A] transition-colors pb-1">Retail</button>
+                <button class="font-cinzel text-xs uppercase tracking-widest text-[#8A8880] hover:text-[#B8965A] transition-colors pb-1">Uffici</button>
+            </div>
+        </div>
+
+        <div class="max-w-[1600px] mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 reveal-up" style="transition-delay: 0.2s;">
+            <!-- Item 1 -->
+            <div class="group relative overflow-hidden h-[400px]">
+                <img src="https://picsum.photos/seed/assetradark3/800/600" alt="Progetto Retail" class="w-full h-full object-cover portfolio-img transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                <div class="absolute inset-0 bg-[#0D0D0B]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 border border-transparent group-hover:border-[#B8965A]/30">
+                    <p class="font-cinzel text-xs text-[#B8965A] tracking-widest mb-2">RETAIL</p>
+                    <h4 class="font-cinzel text-xl text-[#F0EDE6]">Boutique Roma Centro</h4>
+                </div>
+            </div>
+            <!-- Item 2 (span 2 on lg) -->
+            <div class="group relative overflow-hidden h-[400px] lg:col-span-2">
+                <img src="https://picsum.photos/seed/assetradark4/1200/600" alt="Progetto Uffici" class="w-full h-full object-cover portfolio-img transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                <div class="absolute inset-0 bg-[#0D0D0B]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 border border-transparent group-hover:border-[#B8965A]/30">
+                    <p class="font-cinzel text-xs text-[#B8965A] tracking-widest mb-2">UFFICI DIREZIONALI</p>
+                    <h4 class="font-cinzel text-xl text-[#F0EDE6]">Headquarters Corporate Milano</h4>
+                </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="group relative overflow-hidden h-[400px]">
+                <img src="https://picsum.photos/seed/assetradark5/800/600" alt="Progetto Hospitality" class="w-full h-full object-cover portfolio-img transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                <div class="absolute inset-0 bg-[#0D0D0B]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 border border-transparent group-hover:border-[#B8965A]/30">
+                    <p class="font-cinzel text-xs text-[#B8965A] tracking-widest mb-2">HOSPITALITY</p>
+                    <h4 class="font-cinzel text-xl text-[#F0EDE6]">Lounge Hotel 5 Stelle</h4>
+                </div>
+            </div>
+            <!-- Item 4 -->
+            <div class="group relative overflow-hidden h-[400px]">
+                <img src="https://picsum.photos/seed/assetradark6/800/600" alt="Progetto Contract" class="w-full h-full object-cover portfolio-img transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                <div class="absolute inset-0 bg-[#0D0D0B]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 border border-transparent group-hover:border-[#B8965A]/30">
+                    <p class="font-cinzel text-xs text-[#B8965A] tracking-widest mb-2">SPAZI PROFESSIONALI</p>
+                    <h4 class="font-cinzel text-xl text-[#F0EDE6]">Studio Legale Associato</h4>
+                </div>
+            </div>
+            <!-- Item 5 -->
+            <div class="group relative overflow-hidden h-[400px]">
+                <img src="https://picsum.photos/seed/assetradark7/800/600" alt="Progetto Retail" class="w-full h-full object-cover portfolio-img transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                <div class="absolute inset-0 bg-[#0D0D0B]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 border border-transparent group-hover:border-[#B8965A]/30">
+                    <p class="font-cinzel text-xs text-[#B8965A] tracking-widest mb-2">RETAIL</p>
+                    <h4 class="font-cinzel text-xl text-[#F0EDE6]">Concept Store Firenze</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Feed Placeholder -->
+    <section id="social-feed" class="py-20 bg-surface-alt border-y border-[#2A2A26]">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 text-center reveal-up">
+            <h3 class="font-cinzel text-2xl text-[#F0EDE6] mb-12">SEGUICI SUI SOCIAL</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- LinkedIn Placeholder -->
+                <div class="border border-[#2A2A26] p-8 flex flex-col items-center justify-center min-h-[300px] bg-[#0D0D0B]">
+                    <!-- TODO: sostituire con embed LinkedIn SDK -->
+                    <div class="w-12 h-12 border border-[#B8965A] rounded flex items-center justify-center mb-4">
+                        <span class="font-cinzel text-[#B8965A]">IN</span>
+                    </div>
+                    <p class="text-[#8A8880] font-light">LinkedIn Feed Integration</p>
+                </div>
+
+                <!-- Instagram Placeholder -->
+                <div class="border border-[#2A2A26] p-8 flex flex-col items-center justify-center min-h-[300px] bg-[#0D0D0B]">
+                    <!-- TODO: sostituire con embed Instagram SDK -->
+                    <div class="w-12 h-12 border border-[#B8965A] rounded flex items-center justify-center mb-4">
+                        <span class="font-cinzel text-[#B8965A]">IG</span>
+                    </div>
+                    <p class="text-[#8A8880] font-light">Instagram Feed Integration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contatti" class="py-24 bg-surface relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+
+                <div class="reveal-up">
+                    <p class="epigraph-label mb-4">Contatti</p>
+                    <h2 class="font-cinzel text-4xl md:text-6xl text-[#F0EDE6] mb-8">
+                        INIZIAMO A PARLARE<span class="text-[#C8102E]">.</span>
+                    </h2>
+                    <p class="font-cormorant italic text-2xl text-[#8A8880] mb-12">
+                        Per richiedere una consulenza, discutere di un progetto contract o conoscere i brand rappresentati.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-cinzel text-xs text-[#B8965A] tracking-widest mb-2">SEDE</h4>
+                            <p class="text-[#F0EDE6] font-light">Via Roma 1, 00100 Roma (RM), Italia</p>
+                        </div>
+                        <div>
+                            <h4 class="font-cinzel text-xs text-[#B8965A] tracking-widest mb-2">EMAIL</h4>
+                            <p class="text-[#F0EDE6] font-light hover:text-[#C8102E] transition-colors cursor-pointer">info@assetra.it</p>
+                        </div>
+                        <div>
+                            <h4 class="font-cinzel text-xs text-[#B8965A] tracking-widest mb-2">TELEFONO</h4>
+                            <p class="text-[#F0EDE6] font-light">+39 06 1234 5678</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="bg-[#1C1C19] border border-[#2A2A26] p-10 reveal-up" style="transition-delay: 0.2s;">
+                    <form action="#" method="POST" class="space-y-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <input type="text" id="nome" name="nome" placeholder="Nome" class="input-lapideo" required>
+                            </div>
+                            <div>
+                                <input type="text" id="cognome" name="cognome" placeholder="Cognome" class="input-lapideo" required>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <input type="email" id="email" name="email" placeholder="Email" class="input-lapideo" required>
+                            </div>
+                            <div>
+                                <input type="tel" id="telefono" name="telefono" placeholder="Telefono" class="input-lapideo">
+                            </div>
+                        </div>
+
+                        <div>
+                            <select id="settore" name="settore" class="input-lapideo bg-[#1C1C19] appearance-none" required>
+                                <option value="" disabled selected class="text-[#8A8880]">Settore di interesse</option>
+                                <option value="retail">Retail</option>
+                                <option value="hospitality">Hospitality</option>
+                                <option value="uffici">Uffici e Contract</option>
+                                <option value="altro">Altro</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <textarea id="messaggio" name="messaggio" rows="4" placeholder="Messaggio" class="input-lapideo resize-none" required></textarea>
+                        </div>
+
+                        <!-- GDPR Checkbox -->
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" id="privacy" name="privacy" class="mt-1 accent-[#C8102E]" required>
+                            <label for="privacy" class="text-xs text-[#8A8880] font-light leading-snug">
+                                Ho letto e accetto la <a href="privacy-policy.html" class="text-[#B8965A] hover:underline">Privacy Policy</a> per il trattamento dei dati personali.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="w-full bg-[#C8102E] hover:bg-[#A00D25] text-white font-cinzel tracking-widest uppercase py-4 transition-colors">
+                            Invia Richiesta
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#080806] pt-16 pb-8 border-t border-[#2A2A26]">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center md:items-start mb-12">
+            <div class="mb-8 md:mb-0 text-center md:text-left">
+                <svg width="150" height="30" viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="mb-4 mx-auto md:mx-0">
+                    <text x="0" y="30" font-family="'Cinzel', serif" font-size="28" font-weight="600" fill="#F0EDE6" letter-spacing="0.1em">ASSETRA</text>
+                    <circle cx="160" cy="28" r="4" fill="#C8102E" />
+                </svg>
+                <p class="font-cinzel text-xs text-[#8A8880] tracking-widest uppercase">Rappresentanza di Eccellenza</p>
+            </div>
+
+            <div class="flex gap-8">
+                <a href="#" class="text-[#8A8880] hover:text-[#B8965A] transition-colors">LinkedIn</a>
+                <a href="#" class="text-[#8A8880] hover:text-[#B8965A] transition-colors">Instagram</a>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 md:px-12 pt-8 border-t border-[#2A2A26] flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-xs text-[#8A8880] font-light">© 2025 ASSETRA<span class="text-[#C8102E]">.</span> Tutti i diritti riservati.</p>
+            <div class="flex gap-4">
+                <a href="privacy-policy.html" class="text-xs text-[#8A8880] hover:text-[#F0EDE6] transition-colors">Privacy Policy</a>
+                <a href="cookie-policy.html" class="text-xs text-[#8A8880] hover:text-[#F0EDE6] transition-colors">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/cookie-consent.js"></script>
+</body>
+</html>
